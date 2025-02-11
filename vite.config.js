@@ -55,6 +55,9 @@ export default defineConfig({
     hmr: true
   },
   build: {
+    // 将打包后的dist文件夹名称改为docs
+    outDir: "docs",
+
     //minify: false,
     commonjsOptions: {
       exclude: [
