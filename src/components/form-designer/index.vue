@@ -158,7 +158,7 @@ export default {
           languageMenu: true, //是否显示语言切换菜单
           externalLink: true, //是否显示GitHub、文档等外部链接
           formTemplates: false, //是否显示表单模板
-          eventCollapse: true, //是否显示组件事件属性折叠面板
+          eventCollapse: false, //是否显示组件事件属性折叠面板
           widgetNameReadonly: false, //禁止修改组件名称
 
           clearDesignerButton: true, //是否显示清空设计器按钮
