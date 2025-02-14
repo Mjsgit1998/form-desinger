@@ -18,7 +18,7 @@
         customClass
       ]"
     >
-      <template #header>
+      <!-- <template #header>
         <div class="clear-fix">
           <span>{{ widget.options.label }}</span>
           <i
@@ -34,7 +34,7 @@
             </template>
           </i>
         </div>
-      </template>
+      </template> -->
       <draggable
         :list="widget.widgetList"
         item-key="id"
