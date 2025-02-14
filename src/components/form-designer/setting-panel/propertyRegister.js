@@ -58,7 +58,7 @@ const COMMON_PROPERTIES = {
   fileMaxSize: "fileMaxSize-editor",
   fileTypes: "fileTypes-editor",
   contentHeight: "contentHeight-editor",
-  customClass: "customClass-editor",
+  // customClass: "customClass-editor",
 
   //容器
   showBlankRow: "showBlankRow-editor",

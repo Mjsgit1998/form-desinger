@@ -60,7 +60,7 @@
             i18nt("designer.toolbar.preview")
           }}</el-button
         >
-        <el-button
+        <!-- <el-button
           v-if="showToolButton('importJsonButton')"
           link
           type="primary"
@@ -75,7 +75,7 @@
           @click="exportJson"
         >
           {{ i18nt("designer.toolbar.exportJson") }}</el-button
-        >
+        > -->
         <!-- <el-button v-if="showToolButton('exportCodeButton')" link type="primary" @click="exportCode">
           {{i18nt('designer.toolbar.exportCode')}}</el-button> -->
         <el-button
@@ -1877,7 +1877,7 @@ export default {
   overflow: hidden;
 
   .right-toolbar-con {
-    text-align: left;
+    //  text-align: left;
     width: 600px;
   }
 
