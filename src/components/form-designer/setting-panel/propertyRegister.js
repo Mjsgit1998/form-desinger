@@ -58,6 +58,7 @@ const COMMON_PROPERTIES = {
   fileMaxSize: "fileMaxSize-editor",
   fileTypes: "fileTypes-editor",
   contentHeight: "contentHeight-editor",
+  tableItems: "tableItems-editor",
   // customClass: "customClass-editor",
 
   //容器

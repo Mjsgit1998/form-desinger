@@ -22,10 +22,25 @@
       :effect="field.options.effect"
       @close="handleCloseCustomEvent"
     ></el-alert> -->
-    <el-table :data="tableData" style="width: 100%" border>
-      <el-table-column prop="date" label="Date" width="180" />
-      <el-table-column prop="name" label="Name" width="180" />
-      <el-table-column prop="address" label="Address" />
+    <el-table
+      :data="tableData"
+      style="width: 100%"
+      :border="field.options.border"
+      :show-overflow-tooltip="field.options.tooltip"
+    >
+      <el-table-column
+        v-for="item in tableItems"
+        :key="item.prop"
+        :prop="item.prop"
+        :label="item.label"
+        :width="item.width"
+      />
+      <el-table-column label="操作" align="center" fixed="right" width="150">
+        <template #default="scope">
+          <el-button size="small"> 编辑 </el-button>
+          <el-button size="small" type="danger"> 删除 </el-button>
+        </template>
+      </el-table-column>
     </el-table>
     <!-- <div>{{ field.options.description }}</div> -->
   </static-content-wrapper>
@@ -80,6 +95,11 @@ export default {
     subFormRowId: {
       /* 子表单组件行Id，唯一id且不可变 */ type: String,
       default: ""
+    }
+  },
+  computed: {
+    tableItems() {
+      return this.field.options.tableItems;
     }
   },
   components: {

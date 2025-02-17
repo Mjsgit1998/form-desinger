@@ -900,7 +900,7 @@ export default {
     },
 
     saveV3SFC() {
-      this.saveAsFile(this.sfcCodeV3, `vformV3-${generateId()}.vue`);
+      this.saveAsFile(this.sfcCodeV3, `form-${generateId()}.vue`);
     },
 
     getFormData() {

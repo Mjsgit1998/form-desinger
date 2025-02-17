@@ -20,7 +20,7 @@ export default {
     advancedFieldTitle: "高级字段",
     customFieldTitle: "自定义扩展字段",
 
-    noWidgetHint: "请从左侧列表中选择一个组件, 然后用鼠标拖动组件放置于此处.",
+    noWidgetHint: "请从左侧列表中选择一个组件, 然后用鼠标拖动组件放置于此处。",
 
     widgetLabel: {
       grid: "栅格",

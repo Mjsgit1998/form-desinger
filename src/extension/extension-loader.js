@@ -188,5 +188,17 @@ export const loadExtension = function (app) {
     )
   );
 
+  PERegister.registerCPEditor(
+    app,
+    "eltable-border",
+    "eltable-border-editor",
+    PEFactory.createBooleanEditor("border", "是否显示边框")
+  );
+  PERegister.registerCPEditor(
+    app,
+    "eltable-tooltip",
+    "eltable-tooltip-editor",
+    PEFactory.createBooleanEditor("tooltip", "内容溢出提示")
+  );
   registerFWGenerator("eltable", eltableTemplateGenerator); //注册字段组件的代码生成器
 };
