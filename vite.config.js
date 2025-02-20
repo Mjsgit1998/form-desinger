@@ -52,7 +52,8 @@ export default defineConfig({
     }
   },
   server: {
-    hmr: true
+    hmr: true,
+    open: true
   },
   build: {
     // 将打包后的dist文件夹名称改为docs
