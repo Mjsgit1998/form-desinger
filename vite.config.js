@@ -1,10 +1,12 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import viteSvgIcons from "vite-plugin-svg-icons";
 import { resolve } from "path";
 import commonjs from "@rollup/plugin-commonjs";
 import externalGlobals from "rollup-plugin-external-globals";
+
+// 获取env变量
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -53,7 +55,16 @@ export default defineConfig({
   },
   server: {
     hmr: true,
-    open: true
+    open: true,
+    host: "0.0.0.0",
+    proxy: {
+      "/dev-api": {
+        // target: `http://10.249.0.195:8084`,
+        target: `http://127.0.0.1:5500`,
+        changeOrigin: true,
+        rewrite: (path) => path.replace(new RegExp("^" + "/dev-api"), "")
+      }
+    }
   },
   build: {
     // 将打包后的dist文件夹名称改为docs

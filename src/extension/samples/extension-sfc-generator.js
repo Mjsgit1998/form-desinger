@@ -61,6 +61,7 @@ export const alertTemplateGenerator = function (fw, formConfig) {
 
 export const eltableTemplateGenerator = function (fw, formConfig) {
   const wop = fw.options;
+  const borderAttr = `${wop.border ? "border" : ""}`;
   const titleAttr = `title="${wop.title}"`;
   const typeAttr = `type=${wop.type}`;
   const descriptionAttr = !!wop.description
@@ -72,10 +73,20 @@ export const eltableTemplateGenerator = function (fw, formConfig) {
   const showIconAttr = `:show-icon="${wop.showIcon}"`;
   const effectAttr = `effect="${wop.effect}"`;
 
-  const eltableTemplate = `<el-table :data="[]" style="width: 100%" border>
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
+  const tableItemStr = `${fw.options.tableItems
+    .map((it) => {
+      return `<el-table-column prop="${it.prop}" label="${it.label}" width="${it.width}"></el-table-column>`;
+    })
+    .join("")}`;
+
+  const eltableTemplate = `<el-table ${borderAttr} :data="[]" style="width: 100%" >
+  ${tableItemStr}
+  <el-table-column label="操作" align="center" fixed="right" width="150">
+        <template #default="scope">
+          <el-button size="small"> 编辑 </el-button>
+          <el-button size="small" type="danger"> 删除 </el-button>
+        </template>
+      </el-table-column>
   </el-table>`;
 
   return eltableTemplate;

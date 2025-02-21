@@ -42,6 +42,8 @@ export const eltableSchema = {
   options: {
     border: true,
     tooltip: true,
+    defaultObjectName: "",
+    defaultSelectedFields: [],
     tableItems: [
       {
         label: "姓名",

@@ -41,6 +41,14 @@
           <el-button size="small" type="danger"> 删除 </el-button>
         </template>
       </el-table-column>
+
+      <!-- 数据为空 -->
+      <template #empty>
+        <div class="empty-block">
+          <i class="el-icon-document" />
+          <div class="empty-text">暂无数据</div>
+        </div>
+      </template>
     </el-table>
     <!-- <div>{{ field.options.description }}</div> -->
   </static-content-wrapper>
@@ -58,18 +66,7 @@ export default {
   mixins: [emitter, fieldMixin, i18n],
   data: () => {
     return {
-      tableData: [
-        {
-          date: "2016-05-02",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
-        },
-        {
-          date: "2016-05-04",
-          name: "Tom",
-          address: "No. 189, Grove St, Los Angeles"
-        }
-      ]
+      tableData: []
     };
   },
   props: {
