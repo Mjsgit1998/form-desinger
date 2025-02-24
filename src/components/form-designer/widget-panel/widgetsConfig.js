@@ -100,6 +100,8 @@ export const basicFields = [
     icon: "text-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -149,6 +151,8 @@ export const basicFields = [
     icon: "textarea-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -190,6 +194,8 @@ export const basicFields = [
     icon: "number-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -230,6 +236,8 @@ export const basicFields = [
     icon: "radio-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -270,6 +278,8 @@ export const basicFields = [
     icon: "checkbox-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -310,6 +320,8 @@ export const basicFields = [
     icon: "select-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -358,6 +370,8 @@ export const basicFields = [
     icon: "time-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -439,6 +453,8 @@ export const basicFields = [
     icon: "date-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",
@@ -524,6 +540,8 @@ export const basicFields = [
     icon: "switch-field",
     formItemFlag: true,
     options: {
+      defaultObjectName: "",
+      defaultSelectedFields: "",
       name: "",
       label: "",
       labelAlign: "",

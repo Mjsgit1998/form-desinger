@@ -14,6 +14,7 @@
         :readonly="widgetNameReadonly"
         @change="updateWidgetNameAndRef"
       ></el-input>
+      <el-button type="primary" @click="openFieldDialog">选择字段</el-button>
     </template>
     <template v-else>
       <el-select
@@ -32,6 +33,10 @@
         ></el-option>
       </el-select>
     </template>
+    <singleField ref="fieldDialogRef"
+      :default-object-name="optionModel.defaultObjectName"
+      :default-selected-fields="optionModel.defaultSelectedFields"
+      @confirm="handleConfirm" />
   </el-form-item>
 </template>
 
@@ -39,12 +44,13 @@
 import i18n from "@/utils/i18n";
 import { isEmptyStr } from "@/utils/util";
 import SvgIcon from "@/components/svg-icon/index";
-
+import singleField from "./field-eltable/singleField.vue";
 export default {
   name: "name-editor",
   mixins: [i18n],
   components: {
-    SvgIcon
+    SvgIcon,
+    singleField
   },
   props: {
     designer: Object,
@@ -67,6 +73,14 @@ export default {
     }
   },
   methods: {
+    openFieldDialog() {
+      this.$refs.fieldDialogRef.openDialog();
+    },
+    handleConfirm({selectedField, selectedFieldInfo, selectedObject}) { 
+      this.optionModel.defaultSelectedFields = selectedField;
+      this.optionModel.defaultObjectName = selectedObject.ObjectName;
+      this.optionModel.name  = selectedField
+    },
     updateWidgetNameAndRef(newName) {
       let oldName = this.designer.selectedWidgetName;
       if (isEmptyStr(newName)) {

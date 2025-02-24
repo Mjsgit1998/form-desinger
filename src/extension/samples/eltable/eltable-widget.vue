@@ -34,8 +34,16 @@
         :prop="item.prop"
         :label="item.label"
         :width="item.width"
+        :align="item.align"
+        :header-align="item.headerAlign"
       />
-      <el-table-column label="操作" align="center" fixed="right" width="150">
+      <el-table-column
+        v-if="field.options.ifTool"
+        label="操作"
+        align="center"
+        fixed="right"
+        width="150"
+      >
         <template #default="scope">
           <el-button size="small"> 编辑 </el-button>
           <el-button size="small" type="danger"> 删除 </el-button>

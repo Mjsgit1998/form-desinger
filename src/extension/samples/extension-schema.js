@@ -42,33 +42,34 @@ export const eltableSchema = {
   options: {
     border: true,
     tooltip: true,
+    ifTool: true,
     defaultObjectName: "",
     defaultSelectedFields: [],
     tableItems: [
-      {
-        label: "姓名",
-        prop: "name",
-        width: "100px",
-        fixed: false
-      },
-      {
-        label: "年龄",
-        prop: "age",
-        width: "100px",
-        fixed: false
-      },
-      {
-        label: "日期",
-        prop: "date",
-        width: "100px",
-        fixed: false
-      },
-      {
-        label: "地址",
-        prop: "address",
-        width: "100px",
-        fixed: false
-      }
+      // {
+      //   label: "姓名",
+      //   prop: "name",
+      //   width: "100px",
+      //   fixed: false
+      // },
+      // {
+      //   label: "年龄",
+      //   prop: "age",
+      //   width: "100px",
+      //   fixed: false
+      // },
+      // {
+      //   label: "日期",
+      //   prop: "date",
+      //   width: "100px",
+      //   fixed: false
+      // },
+      // {
+      //   label: "地址",
+      //   prop: "address",
+      //   width: "100px",
+      //   fixed: false
+      // }
     ]
   }
 };

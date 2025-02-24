@@ -1,6 +1,5 @@
 // 封装axios
-import axios from "axios";
-console.log("import.meta.env.VITE_APP_BASE_API", import.meta.env);
+import axios from "axios"; 
 const service = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API,
   timeout: 5000

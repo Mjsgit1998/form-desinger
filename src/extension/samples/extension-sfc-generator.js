@@ -62,20 +62,12 @@ export const alertTemplateGenerator = function (fw, formConfig) {
 export const eltableTemplateGenerator = function (fw, formConfig) {
   const wop = fw.options;
   const borderAttr = `${wop.border ? "border" : ""}`;
-  const titleAttr = `title="${wop.title}"`;
-  const typeAttr = `type=${wop.type}`;
-  const descriptionAttr = !!wop.description
-    ? `description="${wop.description}"`
-    : "";
-  const closableAttr = `:closable="${wop.closable}"`;
-  const closeTextAttr = !!wop.closeText ? `close-text="${wop.closeText}"` : "";
-  const centerAttr = `:center="${wop.center}"`;
-  const showIconAttr = `:show-icon="${wop.showIcon}"`;
-  const effectAttr = `effect="${wop.effect}"`;
 
   const tableItemStr = `${fw.options.tableItems
     .map((it) => {
-      return `<el-table-column prop="${it.prop}" label="${it.label}" width="${it.width}"></el-table-column>`;
+      const alignAttr = `align="${it.align}"`;
+      const headerAlignAttr = `header-align="${it.headerAlign}"`;
+      return `<el-table-column prop="${it.prop}"  ${alignAttr} ${headerAlignAttr} label="${it.label}" width="${it.width}"></el-table-column>`;
     })
     .join("")}`;
 

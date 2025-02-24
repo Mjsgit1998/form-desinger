@@ -200,5 +200,11 @@ export const loadExtension = function (app) {
     "eltable-tooltip-editor",
     PEFactory.createBooleanEditor("tooltip", "内容溢出提示")
   );
+  PERegister.registerCPEditor(
+    app,
+    "eltable-ifTool",
+    "eltable-ifTool-editor",
+    PEFactory.createBooleanEditor("ifTool", "显示操作列")
+  );
   registerFWGenerator("eltable", eltableTemplateGenerator); //注册字段组件的代码生成器
 };
